@@ -42,15 +42,28 @@
 // }
 // console.log(j);
 
-var a = "25";
-var b = "5"
-console.log(a > b);
+// var a = "25";
+// var b = "5"
+// console.log(a > b);
 
 
-var a = 20 + 5 + "Prashant";
-console.log(a);
+// var a = 20 + 5 + "Prashant";
+// console.log(a);
 
 
-var a = "Prashant" + 20 + 5  
-console.log(a);
+// var a = "Prashant" + 20 + 5
+// console.log(a);
+for(var i=0;i<=4;i++){
+    var str="";
+    for(var j=0;j<=4-i;j++){
+        str+="*";
+    }
+    for(var j=0;j<=2*i-1;j++){
+        str+=" "
+    }
+    for(var j=0;j<=4-i;j++){
+        str+="*";
+    }
+console.log(str);
+}
 
