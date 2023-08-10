@@ -14,7 +14,6 @@
 //     return arr;
 // };
 
-
 // // Approach 2 O(n) and space O(n)
 // function rotate(arr, k) {
 //     var b = [];
@@ -29,25 +28,32 @@
 //     return b;
 // };
 
-
 // Approach 3 O(n) and Space(0)
-function reverse(array,s,e){
-    while(s<e){
-        var temp =array[s];
-        array[s]=array[e];
-        array[e]=temp;
-        s++;
-        e--;
-    }
-   }
-  var rotate = function(nums, k) {
-    k=k%nums.length;
-    reverse(nums,0,nums.length -1);
-    reverse(nums,0,k-1);
-    reverse(nums,k,nums.length -1);
-     
-  };
+// function reverse(array,s,e){
+//     while(s<e){
+//         var temp =array[s];
+//         array[s]=array[e];
+//         array[e]=temp;
+//         s++;
+//         e--;
+//     }
+//    }
+//   var rotate = function(nums, k) {
+//     k=k%nums.length;
+//     reverse(nums,0,nums.length -1);
+//     reverse(nums,0,k-1);
+//     reverse(nums,k,nums.length -1);
+
+//   };
+
+// Approach 4th
+function rotate(arr, k) {
+  for (var j = 0; j < k; j++) {
+    arr.unshift(arr.pop());
+  }
+  return arr;
+}
 
 var arr = [1, 2, 3, 4, 5, 6];
 var k = 3;
-console.log(rotate(arr, k))
+console.log(rotate(arr, k));
