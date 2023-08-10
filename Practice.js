@@ -100,22 +100,32 @@
 
 
 
-function extract_number(s) {
-    var a=[]
-    for (var i = 0; i < s.length;) {
-        if (s.charCodeAt(i) >= 48 && s.charCodeAt(i) <= 57) {
-            var j = i;
-            while (j < s.length && s.charCodeAt(j) >= 48 && s.charCodeAt(j) <= 57) {
-                j++;
-            }
-            a.push(parseInt(s.slice(i, j)));
-            i = j
-        }
-        else {
-            i++;
-        }
-    }
-    return a;
-    };
-var str = "abc334v44d";
-    console.log(extract_number(str))
+// function extract_number(s) {
+//     var a=[]
+//     for (var i = 0; i < s.length;) {
+//         if (s.charCodeAt(i) >= 48 && s.charCodeAt(i) <= 57) {
+//             var j = i;
+//             while (j < s.length && s.charCodeAt(j) >= 48 && s.charCodeAt(j) <= 57) {
+//                 j++;
+//             }
+//             a.push(parseInt(s.slice(i, j)));
+//             i = j
+//         }
+//         else {
+//             i++;
+//         }
+//     }
+//     return a;
+//     };
+// var str = "abc334v44d";
+//     console.log(extract_number(str))
+
+var str = "hello";
+console.log(str.split(''));
+
+var arr = [1, 5, 2, 4];
+arr.sort(function (a, b) {
+    return b-a;
+})
+
+console.log(arr)
