@@ -120,12 +120,19 @@
 // var str = "abc334v44d";
 //     console.log(extract_number(str))
 
-var str = "hello";
-console.log(str.split(''));
+// var str = "hello";
+// console.log(str.split(''));
 
-var arr = [1, 5, 2, 4];
-arr.sort(function (a, b) {
-    return b-a;
-})
+// var arr = [1, 5, 2, 4];
+// arr.sort(function (a, b) {
+//     return b-a;
+// })
 
-console.log(arr)
+// console.log(arr)
+
+var a = -5;
+function dec2bin(a) {
+    return (a>>>0).toString(2)
+}
+
+console.log(dec2bin(a))
