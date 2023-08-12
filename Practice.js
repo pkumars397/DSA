@@ -190,8 +190,27 @@
 //     console.log(keyv)
 // }
 
-var setf = new Set();
-setf.add(1);
-setf.add(1);
+// var setf = new Set();
+// setf.add(1);
+// setf.add(1);
+var nums = [1,2,3,1]
+var mapping= new Map();
+    for(var i=0;i<nums.length;i++){
+        if (mapping.get(nums[i]) == undefined) {
+            mapping.set(nums[i], 1);
+        }
+        else{
+            mapping.set(nums[i],mapping.get(nums[i])+1);
+        }
+}
+for(var i=0;i<nums.legth;i++){
+
+    if((mapping.get(nums[i]))>1){
+        console.log(true)
+        break;
+    }
+
+  }
+console.log(false)
 
 
