@@ -130,9 +130,45 @@
 
 // console.log(arr)
 
-var a = -5;
-function dec2bin(a) {
-    return (a>>>0).toString(2)
+// var a = -5;
+// function dec2bin(a) {
+//     return (a>>>0).toString(2)
+// }
+
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
-console.log(dec2bin(a))
+function makeArrayPrime(arr, k) {
+    for (let i = 0; i < arr.length; i++) {
+        let currentNumber = arr[i];
+        while (!isPrime(currentNumber)) {
+            currentNumber++;
+            if (currentNumber - arr[i] > k) {
+                arr[i] = 0;
+                break;
+            }
+        }
+        if (arr[i] !== 0) {
+            arr[i] = currentNumber;
+        }
+    }
+
+    return arr;
+}
+
+// Test cases
+const arr1 = [10, 12, 15, 20, 22];
+const k1 = 3;
+console.log(makeArrayPrime(arr1, k1)); // Output: [11, 13, 17, 23, 23]
+
+
+
