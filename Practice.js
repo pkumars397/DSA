@@ -18,14 +18,13 @@
 //   return a;
 // }
 
-
 // var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 // console.log(sort(arr))
 // function sort(arr) {
 //     var b = [];
 //     for (var j = 0; j< arr.length; j++){
-        
+
 //         var coun = 0;
 //         for (var i = 0; i < 32; i++){
 //             if ( arr[j]>> i & 1===1) {
@@ -33,11 +32,9 @@
 //             }
 //         }
 //         b.push(coun)
-        
 
 //     }
-    
-    
+
 //     for (var i = 0; i < arr.length - 1; i++){
 //         for (var j = 0; j < arr.length - 1 - i; j++){
 //             if (b[j]>b[j+1] || (b[j]==b[j+1] && arr[j]>arr[j+1])) {
@@ -67,7 +64,7 @@
 //         [arr[l], arr[r]] = [arr[r], arr[l]]
 //         l++;
 //         r--;
-        
+
 //     }
 //     return arr;
 // }
@@ -89,16 +86,13 @@
 //     for (var i = a.length; i <= 7; i++) {
 //         a.push(0)
 //     }
-    
+
 //     var i = 0;
 //     while (i < 8 && a[i] == 0) {
 //         i += 1;
 //     }
 
-  
 // }
-
-
 
 // function extract_number(s) {
 //     var a=[]
@@ -170,7 +164,6 @@
 // const k1 = 3;
 // console.log(makeArrayPrime(arr1, k1)); // Output: [11, 13, 17, 23, 23]
 
-
 // var nums =[2,14,18,22,22]
 
 // nums.sort(function(a,b){
@@ -219,7 +212,7 @@
 // for (var i = 0; i < l; i++) {
 //     if (nm.get(nums[i]) === undefined) {
 //         nm.set(nums[i], i)
-    
+
 //     }
 //     else {
 //         nm.set(nums[i], nm.get(nums[i])+i)
@@ -240,7 +233,7 @@
 //     for (var i = 0; i < l; i++) {
 //         if (nm.get(nums[i]) === undefined) {
 //             nm.set(nums[i], i)
-        
+
 //         }
 //         else {
 //             nm.set(nums[i], nm.get(nums[i]) + i)
@@ -261,8 +254,27 @@
 // ans[1] = true;
 //     console.log(ans);
 
-    
-const ans=new Array(5).fill(true);
+// const ans=new Array(5).fill(true);
 
-ans[1] = false;
-    console.log(ans)
+// ans[1] = false;
+//     console.log(ans)
+
+var n = 10;
+
+var arr = [];
+var x = 2;
+for (var i = 0; i < n; ) {
+  var flag = 1;
+  for (j = 2; j < x; j++) {
+    if (x % j == 0) {
+      flag = 0;
+      break;
+    }
+  }
+  if (flag == 1) {
+    arr.push(x);
+    i++;
+  }
+  x++;
+}
+console.log(arr);
