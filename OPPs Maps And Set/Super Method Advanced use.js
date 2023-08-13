@@ -46,8 +46,8 @@ class Employee extends Member {
 }
 
 class Manager extends Member {
-  constructor(n, a, p, add, s, depart) {
-    super(n, a, p, add, s);
+  constructor(na,aa,pa,adda,sa,depart) {
+    super(na,aa,pa,adda,sa);
     this.department = depart;
   }
   print_details() {
