@@ -193,24 +193,76 @@
 // var setf = new Set();
 // setf.add(1);
 // setf.add(1);
-var nums = [1,2,3,1]
-var mapping= new Map();
-    for(var i=0;i<nums.length;i++){
-        if (mapping.get(nums[i]) == undefined) {
-            mapping.set(nums[i], 1);
-        }
-        else{
-            mapping.set(nums[i],mapping.get(nums[i])+1);
-        }
-}
-for(var i=0;i<nums.legth;i++){
+// var nums = [1,2,3,1]
+// var mapping= new Map();
+//     for(var i=0;i<nums.length;i++){
+//         if (mapping.get(nums[i]) == undefined) {
+//             mapping.set(nums[i], 1);
+//         }
+//         else{
+//             mapping.set(nums[i],mapping.get(nums[i])+1);
+//         }
+// }
+// for(var i=0;i<nums.legth;i++){
 
-    if((mapping.get(nums[i]))>1){
-        console.log(true)
-        break;
-    }
+//     if((mapping.get(nums[i]))>1){
+//         console.log(true)
+//         break;
+//     }
 
-  }
-console.log(false)
+//   }
+// console.log(false)
+// var nums=[3,2,4]
 
+// var nm = new Map();
+// var l = nums.length;
+// for (var i = 0; i < l; i++) {
+//     if (nm.get(nums[i]) === undefined) {
+//         nm.set(nums[i], i)
+    
+//     }
+//     else {
+//         nm.set(nums[i], nm.get(nums[i])+i)
+//     }
+// }
+// console.log(nm)
+// var target;
+// // for (var i = 0; i < l; i++){
+// //     var b=target-nums[i]
+// //     if(nm.has(b)){
+// //       console.log(nm.get(b))
+// //     }
+// //   }
 
+// var twoSum = function (nums, target) {
+//     var nm = new Map();
+//     var l = nums.length;
+//     for (var i = 0; i < l; i++) {
+//         if (nm.get(nums[i]) === undefined) {
+//             nm.set(nums[i], i)
+        
+//         }
+//         else {
+//             nm.set(nums[i], nm.get(nums[i]) + i)
+//         }
+//     }
+//  return
+// };
+//     var nums = [2, 7, 11, 15];
+//     var target = 13;
+//     console.log(twoSum(nums,target))
+
+// console.log("0"==[])
+
+// var arr = [{ name: "prashant", salary: 100 }];
+// console.log(arr.length)
+
+// const ans = Array(20).fill(false);
+// ans[1] = true;
+//     console.log(ans);
+
+    
+const ans=new Array(5).fill(true);
+
+ans[1] = false;
+    console.log(ans)
