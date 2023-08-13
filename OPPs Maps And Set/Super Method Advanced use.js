@@ -27,6 +27,9 @@ class Member {
     this.Address = a;
     this.Salary = s;
   }
+  printSalary(){
+    console.log(this.Salary)
+}
 }
 
 class Employee extends Member {
@@ -37,6 +40,8 @@ class Employee extends Member {
   print_details() {
     console.log(this.Name);
     console.log(this.specialization);
+    // super.printSalary()
+    this.printSalary()
   }
 }
 
