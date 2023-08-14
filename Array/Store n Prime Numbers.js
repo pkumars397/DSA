@@ -36,19 +36,44 @@
 //   }
 //   return a;
 // };
-let n = 15;
-prime(n);
 
-function prime(n) {
-  let ist = 2;
-  for (let i = 0; i < n; ) {
-    for (var j = 2; j < ist; j++) {
-      if (ist % j == 0) break;
+// function prime(n) {
+//   let ist = 2;
+//   for (let i = 0; i < n; ) {
+//     for (var j = 2; j < ist; j++) {
+//       if (ist % j == 0) break;
+//     }
+//     if (ist == j) {
+//       console.log(ist);
+//       i++;
+//     }
+//     ist++;
+//   }
+// }
+
+function isPrime(n) {
+  if (n == 1) return false;
+  for (let i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return false;
     }
-    if (ist == j) {
-      console.log(ist);
-      i++;
-    }
-    ist++;
   }
+  return true;
 }
+
+function prime(t) {
+  let a = [];
+  let x = 2;
+  while (n > 0) {
+    if (isPrime(x)) {
+      a.push(x);
+      n--;
+    }
+    x++;
+  }
+  return a;
+}
+
+var n = 5;
+
+console.log(prime(n));
