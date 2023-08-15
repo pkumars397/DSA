@@ -74,6 +74,6 @@ function prime(t) {
   return a;
 }
 
-var n = 5;
+var n=10
 
 console.log(prime(n));

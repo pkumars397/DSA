@@ -259,22 +259,33 @@
 // ans[1] = false;
 //     console.log(ans)
 
-var n = 10;
+// var n = 10;
 
-var arr = [];
-var x = 2;
-for (var i = 0; i < n; ) {
-  var flag = 1;
-  for (j = 2; j < x; j++) {
-    if (x % j == 0) {
-      flag = 0;
-      break;
-    }
-  }
-  if (flag == 1) {
-    arr.push(x);
-    i++;
-  }
-  x++;
-}
-console.log(arr);
+// var arr = [];
+// var x = 2;
+// for (var i = 0; i < n; ) {
+//   var flag = 1;
+//   for (j = 2; j < x; j++) {
+//     if (x % j == 0) {
+//       flag = 0;
+//       break;
+//     }
+//   }
+//   if (flag == 1) {
+//     arr.push(x);
+//     i++;
+//   }
+//   x++;
+// }
+// console.log(arr);
+
+// var x = -123;
+// console.log(String(x))
+// console.log(`${x}`)
+// console.log(x.toString())
+
+// var n = 3454;
+// console.log(String(n).length)
+
+// let arr = [2, 1, 4, 6, 7];
+// console.log(arr.map(x => { return 2 * x});
