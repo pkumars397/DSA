@@ -289,3 +289,27 @@
 
 // let arr = [2, 1, 4, 6, 7];
 // console.log(arr.map(x => { return 2 * x});
+
+
+var numDifferentIntegers = function(word) {
+    let map=new Map()
+    for(let i=0;i<word.length;i++){
+
+        if(word.charCodeAt(i)>=48 && word.charCodeAt(i)<=57){
+            j=i
+            while(j<word.length && word.charCodeAt(j)>=48 && word.charCodeAt(j)<=57){
+                j++;
+            }
+
+            map.set(parseInt(word.slice(i, j)), i);
+         i=j
+        }else{
+            i++
+        }
+    }
+    return map;
+};
+
+
+var s = "xeuhqendvrq3n35"
+console.log(numDifferentIntegers(s))
