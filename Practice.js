@@ -290,26 +290,91 @@
 // let arr = [2, 1, 4, 6, 7];
 // console.log(arr.map(x => { return 2 * x});
 
+// var numDifferentIntegers = function(word) {
+//     let map=new Map()
+//     for(let i=0;i<word.length;i++){
 
-var numDifferentIntegers = function(word) {
-    let map=new Map()
-    for(let i=0;i<word.length;i++){
+//         if(word.charCodeAt(i)>=48 && word.charCodeAt(i)<=57){
+//             j=i
+//             while(j<word.length && word.charCodeAt(j)>=48 && word.charCodeAt(j)<=57){
+//                 j++;
+//             }
 
-        if(word.charCodeAt(i)>=48 && word.charCodeAt(i)<=57){
-            j=i
-            while(j<word.length && word.charCodeAt(j)>=48 && word.charCodeAt(j)<=57){
-                j++;
-            }
+//             map.set(parseInt(word.slice(i, j)), i);
+//          i=j
+//         }else{
+//             i++
+//         }
+//     }
+//     return map;
+// };
 
-            map.set(parseInt(word.slice(i, j)), i);
-         i=j
-        }else{
-            i++
-        }
-    }
-    return map;
-};
+// var s = "xeuhqendvrq3n35"
+// console.log(numDifferentIntegers(s))
+// var swap = (arr) => {
+//   let sortArray = [...arr].sort((a, b) => a - b);
 
+//   let indexMap = new Map();
+//   for (let i = 0; i < sortArray.length; i++) {
+//     indexMap.set(sortArray[i], i);
+//   }
 
-var s = "xeuhqendvrq3n35"
-console.log(numDifferentIntegers(s))
+//   let change = 0;
+//   const visited = new Array(arr.length).fill(false);
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!visited[i]) {
+//       let count = 0;
+//       let j = i;
+//       while (!visited[j]) {
+//         visited[j] = true;
+//         j = indexMap.get(arr[j]);
+//         count++;
+//       }
+
+//       if (count > 0) {
+//         change = change + count - 1;
+//       }
+//     }
+//   }
+//   return change;
+// };
+
+// let arr = [10, 19, 6, 5, 3];
+// console.log(swap(arr));
+
+// let i = 1;
+// while (i <= 5) {
+//     let j = 1;
+//     var str=""
+//     while (j <= 6 - i) {
+//         str += "*"
+//         j++;
+       
+//     }
+//     console.log(str);
+//     i++;
+// }
+// i = 1;
+// while (i <= 5) {
+//     let j = 1
+//     let str=''
+//     while (j<= i) {
+//         str += "*"
+//         j++
+//     }
+//     console.log(str)
+//     i++;
+// }
+
+// Total number of obj created using static variable
+// class object{
+//     static i = 0;
+//     constructor() {
+//         object.i += 1;
+//     }
+// }
+
+// let x1 = new object()
+// let x2 = new object()
+// let x3 = new object()
+// console.log(object.i)
