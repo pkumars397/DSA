@@ -422,16 +422,148 @@
 // let i = 2;
 // console.log(i**3)
 
-let a = [1, 2, -1, 4]
-let max = a[0]
+// let a = [1, 2, -1, 4]
+// let max = a[0]
 
-for (let i = 0; i < a.length; i++){
-    let sum = 0
+// for (let i = 0; i < a.length; i++){
+//     let sum = 0
     
-    for (let j = i; j < a.length; j++) {
+//     for (let j = i; j < a.length; j++) {
         
-        }
-    }
+//         }
+//     }
 
+// }
+// console.log(max)
+// let s="((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()"
+// let open=[]; //Keeping track of starting braces index
+//     let star=[]; //Keeping Track of *
+//     for(let i=0;i<s.length;i++){
+//         if(s[i]=="("){
+//             open.push(i);
+//         }
+//         else if(s[i]=="*"){
+//             star.push(i);
+//         }
+//         else{
+//             if(open.length!=0){
+//                 open.pop()
+//             }else if(star.length!=0){
+//                 star.pop()
+//             }else{
+//                 return false;
+//             }
+//         }
+// }
+// while(open.length!=0){
+//     if(star.length==0){
+//         return false;
+//     }else if((open[open.length-1]) < (star[star.length -1])){
+//         open.pop();
+//         star.pop();
+//     }
+//     else{
+//         return false;
+//     }
+// }
+
+// console.log(open.length)
+// console.log(open)
+//     console.log(star)
+// let a = [];
+// console.log(a.pop())
+
+// Nearest greater to right;
+// let arr = [1, 4, 2, 5, 6, 3, 2];
+// // ans [[4,5,5,6,-1,-1,-1]
+// let stack = [];
+// let ans = [];
+// for (let i = arr.length-1; i >= 0; i--){
+//     if (stack.length == 0) {
+//         ans.push(-1);
+//     }
+//     else if (stack.length > 0 && stack[stack.length - 1] > arr[i]) {
+//         ans.push(stack[stack.length - 1]);
+//     }
+//     else if (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+//         while (stack.length > 0 && stack[stack.length - 1]<= arr[i]) {
+//             stack.pop();
+//         }
+//         if (stack[stack.length - 1] > arr[i]) {
+//             ans.push(stack[stack.length-1])
+//         } else {
+//             ans.push(-1)
+//         }
+//     }
+//     stack.push(arr[i])
+// }
+// ans = ans.reverse();
+// console.log(ans)
+// console.log(stack)
+
+
+// let a = [1, 2]
+// let b=[]
+// for (let i = 0; i < a.length; i++){
+//     if (a[i] == 1) {
+//         console.log("hello")
+//     } else if (a[i] == 2) {
+//         console.log("hyy")
+//     }
+//     b.push(3)
+// }
+// console.log(a)
+// console.log(b)
+
+// Nearest greatest on left
+// let a = [3, 2, 5, 1, 7, 8, 2];
+// // ans=[-1,3,-1,5,-1,-1,8]
+// let stack = [];
+// let ansStack = [];
+
+
+// for (let i = 0; i < a.length; i++){
+//     if (stack.length == 0) {
+//         ansStack.push(-1)
+//     }
+//     else if (stack.length > 0 && stack[stack.length - 1] > a[i]) {
+//         ansStack.push(stack[stack.length-1])
+//     } else if (stack.length > 0 && stack[stack.length - 1] <= a[i]) {
+//         while (stack.length > 0 && stack[stack.length - 1] <= a[i]) {
+            
+//             stack.pop()
+//         }
+//         if (stack.length === 0) {
+//             ansStack.push(-1)
+//         } else if (stack[stack.length - 1] > a[i]) {
+//             ansStack.push(stack[stack.length-1])
+//         }
+//     }
+//     stack.push(a[i])
+// }
+
+let a = [3, 2, 5, 1, 7, 8, 2];
+// Nearest Shortest to right
+// [-1,-1,2,-1,1,7,1]
+let stack = [];
+let ans = [];
+for (let i = 0; i < a.length; i++){
+    if (stack.length == 0) {
+        ans.push(-1)
+    } else if (stack.length > 0 && stack[stack.length - 1] < a[i]) {
+        ans.push(stack[stack.length-1])
+    } else if (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
+        while (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
+            stack.pop()
+        } if (stack.length == 0) {
+            ans.push(-1)
+        } else {
+            ans.push(stack[stack.length-1])
+        }
+       
+    }
+    stack.push(a[i]) 
 }
-console.log(max)
+
+console.log(stack)
+console.log(ans)
