@@ -26,9 +26,9 @@ let x = new Stack();
 x.push(10);
 x.push(23);
 console.log(x.stack);
-x.pop();
 console.log(x.stack);
 x.push(5);
 console.log(x.stack);
 console.log(x.peek());
 console.log(x.isEmpty());
+console.log(x.stack[x.stack.length-1])

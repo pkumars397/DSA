@@ -349,7 +349,7 @@
 //     while (j <= 6 - i) {
 //         str += "*"
 //         j++;
-       
+
 //     }
 //     console.log(str);
 //     i++;
@@ -378,3 +378,60 @@
 // let x2 = new object()
 // let x3 = new object()
 // console.log(object.i)
+
+// function reverse(arr, s, e) {
+//   while (s < e) {
+//     [arr[s], arr[e]] = [arr[e], arr[s]];
+//     s++;
+//     e--;
+//   }
+//   return arr;
+// }
+
+// var arr = [32, 4, 5];
+// console.log(reverse(arr, 0, 2));
+//     let set=new Set()
+// let sentence="t"
+// for(let i=97;i<=122;i++){
+//        set.add(String.fromCharCode(i))
+// }
+// for (let j = 0; j < sentence.length; j++){
+//     if (set.has(sentence[j])) {
+//         set.delete(sentence[j])
+//     }
+// }
+// console.log(set)
+
+// sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
+// for (val of sentences) {
+//     console.log(val.split(' '))
+// }
+// function concatenate(arr, len) {
+//     // let res=""
+//     // for (let i = 0; i < arr.length; i++){
+//     //     if (arr[i].length == len){
+//     //         res += arr[i];
+//     //     }
+//     // }
+//     // return res;
+// }
+// let arr = ["abc", "def", "xyzd", "lmn"]
+// let len = 3
+// console.log(concatenate(arr,len))
+
+// let i = 2;
+// console.log(i**3)
+
+let a = [1, 2, -1, 4]
+let max = a[0]
+
+for (let i = 0; i < a.length; i++){
+    let sum = 0
+    
+    for (let j = i; j < a.length; j++) {
+        
+        }
+    }
+
+}
+console.log(max)

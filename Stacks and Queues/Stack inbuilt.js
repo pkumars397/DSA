@@ -4,4 +4,4 @@ a.push(5);
 console.log(a);
 a.pop();
 console.log(a)
-
+console.log(a.length==0)
