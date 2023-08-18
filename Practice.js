@@ -542,28 +542,122 @@
 //     stack.push(a[i])
 // }
 
-let a = [3, 2, 5, 1, 7, 8, 2];
-// Nearest Shortest to right
-// [-1,-1,2,-1,1,7,1]
-let stack = [];
-let ans = [];
-for (let i = 0; i < a.length; i++){
-    if (stack.length == 0) {
-        ans.push(-1)
-    } else if (stack.length > 0 && stack[stack.length - 1] < a[i]) {
-        ans.push(stack[stack.length-1])
-    } else if (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
-        while (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
-            stack.pop()
-        } if (stack.length == 0) {
-            ans.push(-1)
-        } else {
-            ans.push(stack[stack.length-1])
-        }
+// let a = [3, 2, 5, 1, 7, 8, 2];
+// // Nearest Shortest to right
+// // [-1,-1,2,-1,1,7,1]
+// let stack = [];
+// let ans = [];
+// for (let i = 0; i < a.length; i++){
+//     if (stack.length == 0) {
+//         ans.push(-1)
+//     } else if (stack.length > 0 && stack[stack.length - 1] < a[i]) {
+//         ans.push(stack[stack.length-1])
+//     } else if (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
+//         while (stack.length > 0 && stack[stack.length - 1] >= a[i]) {
+//             stack.pop()
+//         } if (stack.length == 0) {
+//             ans.push(-1)
+//         } else {
+//             ans.push(stack[stack.length-1])
+//         }
        
-    }
-    stack.push(a[i]) 
-}
+//     }
+//     stack.push(a[i])
+// }
 
-console.log(stack)
-console.log(ans)
+// console.log(stack)
+// console.log(ans)
+
+
+// let a = [1, -1,-5,-2, 3, 2, -7]
+// let left = 0;
+// let right = a.length - 1;
+// while (left < right) {
+//     while (left <right && a[left] > 0) {
+//         left++;
+//     }
+//     while (left<right && a[right] < 0) {
+//         right--;
+//     }
+//     if (left < right) {
+//         [a[left],a[right]]=[a[right],a[left]]
+//     }
+// }
+// console.log(a)
+
+// let a = [1,2,4,7,11];
+// let max = 0;
+// for (let i = 1; i < a.length; i++){
+//     max=Math.max(max,Math.abs(a[i]-a[i-1]))
+// }
+// return max;
+// console.log(max)
+
+// let s = "prashant"
+// console.log(s.split("").sort().join(''))
+// let s="abbaca"
+// console.log(s.split("").sort().join(''))
+
+// let nums = [1, 2, 3, 4, 3]
+// let stack = [];
+// stack.push(nums[nums.length-1])
+// let ans=[];
+//     for(let i=0;i<nums.length-1;i++){
+//         if(nums[i]>nums[nums.length-1]){
+//             ans.push(nums[i]);
+//             break;
+//         }
+// }
+// if (ans.length == 0) {
+//     ans.push(-1)
+// }
+//     console.log(ans)
+
+
+// for(let i=nums.length-2;i>=0;i--){
+//     if(stack.length==0){
+//         ans.push(-1);
+//     }else if(stack.length>0 && stack[stack.length-1]>nums[i]){
+//         ans.push(stack[stack.length-1]);
+//     }else if(stack.length>0 && stack[stack.length-1]<=nums[i]){
+//         while(stack.length>0 && stack[stack.length-1]<=nums[i]){
+//             stack.pop();
+//         }
+//         if(stack[stack.length-1]>nums[i]){
+//             ans.push(stack[stack.length-1]);
+//         }else{
+//             ans.push(-1);
+//         }
+//     }
+//     stack.push(nums[i]);
+// }
+  
+// console.log(ans.reverse())
+// let s="2[abc]3[cd]ef"
+
+//     let stringStack=[];
+
+// for (let i = 0; i < s.length; i++) {
+//     if (s[i] != "]") {
+//         stringStack.push(s[i])
+//     }
+//     else {
+//         var str = '';
+//         while (stringStack[stringStack.length-1]!="[") {
+//             str=stringStack.pop()+str
+//         }
+//         stringStack.pop();
+//         var k = ""
+        
+//         while (/[0-9]/.test(stringStack[stringStack.length-1])) {
+//             k = stringStack.pop() + k;
+//         }
+//         str = str.repeat(k)
+//         stringStack.push(str)
+        
+//     }
+   
+// }
+
+// console.log(stringStack.join(''))
+
