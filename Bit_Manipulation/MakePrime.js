@@ -1,4 +1,5 @@
-var arr = [8, 11, 13, 24];
+var arr = [10, 12, 15, 20, 22];
+
 var k = 4;
 
 var isPrime = function (n) {
@@ -17,10 +18,11 @@ var isPrime = function (n) {
 var makeArrayPrime = function (arr, k) {
   var ans = [];
   for (var i = 0; i < arr.length; i++) {
+    let checker = k;
     while (!isPrime(arr[i])) {
       arr[i]++;
-      k--;
-      if (k <= 0) {
+      checker--;
+      if (checker <= 0) {
         arr[i] = -1;
         break;
       }

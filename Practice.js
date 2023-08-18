@@ -427,9 +427,9 @@
 
 // for (let i = 0; i < a.length; i++){
 //     let sum = 0
-    
+
 //     for (let j = i; j < a.length; j++) {
-        
+
 //         }
 //     }
 
@@ -501,7 +501,6 @@
 // console.log(ans)
 // console.log(stack)
 
-
 // let a = [1, 2]
 // let b=[]
 // for (let i = 0; i < a.length; i++){
@@ -521,7 +520,6 @@
 // let stack = [];
 // let ansStack = [];
 
-
 // for (let i = 0; i < a.length; i++){
 //     if (stack.length == 0) {
 //         ansStack.push(-1)
@@ -530,7 +528,7 @@
 //         ansStack.push(stack[stack.length-1])
 //     } else if (stack.length > 0 && stack[stack.length - 1] <= a[i]) {
 //         while (stack.length > 0 && stack[stack.length - 1] <= a[i]) {
-            
+
 //             stack.pop()
 //         }
 //         if (stack.length === 0) {
@@ -560,14 +558,13 @@
 //         } else {
 //             ans.push(stack[stack.length-1])
 //         }
-       
+
 //     }
 //     stack.push(a[i])
 // }
 
 // console.log(stack)
 // console.log(ans)
-
 
 // let a = [1, -1,-5,-2, 3, 2, -7]
 // let left = 0;
@@ -613,7 +610,6 @@
 // }
 //     console.log(ans)
 
-
 // for(let i=nums.length-2;i>=0;i--){
 //     if(stack.length==0){
 //         ans.push(-1);
@@ -631,7 +627,7 @@
 //     }
 //     stack.push(nums[i]);
 // }
-  
+
 // console.log(ans.reverse())
 // let s="2[abc]3[cd]ef"
 
@@ -648,16 +644,57 @@
 //         }
 //         stringStack.pop();
 //         var k = ""
-        
+
 //         while (/[0-9]/.test(stringStack[stringStack.length-1])) {
 //             k = stringStack.pop() + k;
 //         }
 //         str = str.repeat(k)
 //         stringStack.push(str)
-        
+
 //     }
-   
+
 // }
 
 // console.log(stringStack.join(''))
 
+// let n = 14;
+// let sum = 0;
+// for (let i = 1; i < n; i++){
+//     sum += Math.pow(i, 2)
+//     if (sum > n) {
+//         console.log(i - 1)
+//         break;
+//     }
+
+// }
+
+function isPrime(a) {
+  if (a < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < a; i++) {
+    if (a % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function makeArrayPrime(arr, k) {
+  for (let i = 0; i < arr.length; i++) {
+    let checker = k;
+    while (!isPrime(arr[i]) && checker > 0) {
+      arr[i]++;
+      checker--;
+    }
+  }
+  return arr;
+}
+
+let array = [10, 12, 15, 20, 22];
+
+let k = 3;
+
+console.log(makeArrayPrime(array, k));
+console.log(!isPrime(20));
