@@ -34,5 +34,8 @@ let sum = 0;
 for (let val of area) {
   sum += val;
 }
-
+console.log(mxl)
+console.log(mxr)
+console.log(height)
+console.log(area)
 console.log(sum);

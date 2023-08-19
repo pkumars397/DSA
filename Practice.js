@@ -668,33 +668,156 @@
 
 // }
 
-function isPrime(a) {
-  if (a < 2) {
-    return false;
-  }
+// function isPrime(a) {
+//   if (a < 2) {
+//     return false;
+//   }
 
-  for (let i = 2; i < a; i++) {
-    if (a % i == 0) {
-      return false;
-    }
-  }
-  return true;
-}
+//   for (let i = 2; i < a; i++) {
+//     if (a % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-function makeArrayPrime(arr, k) {
-  for (let i = 0; i < arr.length; i++) {
-    let checker = k;
-    while (!isPrime(arr[i]) && checker > 0) {
-      arr[i]++;
-      checker--;
-    }
-  }
-  return arr;
-}
+// function makeArrayPrime(arr, k) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let checker = k;
+//     while (!isPrime(arr[i]) && checker > 0) {
+//       arr[i]++;
+//       checker--;
+//     }
+//   }
+//   return arr;
+// }
 
-let array = [10, 12, 15, 20, 22];
+// let array = [10, 12, 15, 20, 22];
 
-let k = 3;
+// let k = 3;
 
-console.log(makeArrayPrime(array, k));
-console.log(!isPrime(20));
+// console.log(makeArrayPrime(array, k));
+// console.log(!isPrime(20));
+
+let heights = [2,4]
+
+// let nslStack = [];
+// let ans = [];
+// let pseudoelement=-1
+// for (let i = 0; i < heights.length; i++){
+        
+//         if(nslStack.length==0){
+//             ans.push(pseudoelement)
+//         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] < heights[i]) {
+//             ans.push(nslStack[nslStack.length-1][1])
+//         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] >= heights[i]) {
+//             while (nslStack.length > 0 && nslStack[nslStack.length - 1][0] >= heights[i]) {
+//                 nslStack.pop();
+//             }
+//             if (nslStack.length == 0) {
+//                 ans.push(pseudoelement)
+//             } else {
+//                 ans.push(nslStack[nslStack.length-1][1])
+//             }
+//         }
+       
+//         nslStack.push([heights[i],i])
+// }
+
+// let nsrStack = [];
+// let ansr = [];
+
+// pseudoelement = heights.length
+// for (let i = heights.length-1; i >=0; i--){
+        
+//         if(nsrStack.length==0){
+//             ansr.push(pseudoelement)
+//         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] <heights[i]) {
+//              ansr.push(nsrStack[nsrStack.length-1][1])
+//         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] >= heights[i]) {
+//             while (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] >= heights[i]) {
+//                 nsrStack.pop();
+//             }
+//             if (nsrStack.length == 0) {
+//                 ansr.push(pseudoelement)
+//             } else {
+//                 ansr.push(nsrStack[nsrStack.length-1][1])
+//             }
+//         }
+       
+//         nsrStack.push([heights[i],i])
+// }
+// ansr.reverse();
+
+// let width = [];
+// for (i = 0; i < ans.length; i++){
+//     width[i] = ansr[i]-ans[i]-1
+// }
+// let area = [];
+// for (i = 0; i < heights.length; i++){
+//     area[i] = width[i] * heights[i];
+// }
+// let res =Math.max(...area)
+// console.log(area)
+// console.log(ans)
+// console.log(ansr)
+// console.log(res)
+// let nslStack = [];
+// let ans = [];
+// let pseudoelement=-1
+// for (let i = 0; i < heights.length; i++){
+        
+//         if(nslStack.length==0){
+//             ans.push(pseudoelement)
+//         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] < heights[i]) {
+//             ans.push(nslStack[nslStack.length-1][1])
+//         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] >= heights[i]) {
+//             while (nslStack.length > 0 && nslStack[nslStack.length - 1][0] >= heights[i]) {
+//                 nslStack.pop();
+//             }
+//             if (nslStack.length == 0) {
+//                 ans.push(pseudoelement)
+//             } else {
+//                 ans.push(nslStack[nslStack.length-1][1])
+//             }
+//         }
+       
+//         nslStack.push([heights[i],i])
+// }
+
+// let nsrStack = [];
+// let ansr = [];
+
+// pseudoelement = heights.length-1
+// for (let i = heights.length-1; i >=0; i--){
+        
+//         if(nsrStack.length==0){
+//             ansr.push(pseudoelement)
+//         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] <heights[i]) {
+//              ansr.push(nsrStack[nsrStack.length-1][1])
+//         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] >= heights[i]) {
+//             while (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] >= heights[i]) {
+//                 nsrStack.pop();
+//             }
+//             if (nsrStack.length == 0) {
+//                 ansr.push(pseudoelement)
+//             } else {
+//                 ansr.push(nsrStack[nsrStack.length-1][1])
+//             }
+//         }
+       
+//         nsrStack.push([heights[i],i])
+// }
+// ansr.reverse();
+
+// let width = [];
+// for (i = 0; i < ans.length; i++){
+//     width[i] = ansr[i]-ans[i]-1
+// }
+// let area = [];
+// for (i = 0; i < heights.length; i++){
+//     area[i] = width[i] * heights[i];
+// }
+ 
+// console.log(Math.max(...area))
+
