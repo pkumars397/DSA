@@ -699,7 +699,7 @@
 // console.log(makeArrayPrime(array, k));
 // console.log(!isPrime(20));
 
-let heights = [2,4]
+// let heights = [2,4]
 
 // let nslStack = [];
 // let ans = [];
@@ -820,4 +820,24 @@ let heights = [2,4]
 // }
  
 // console.log(Math.max(...area))
+// let s = "anagram"
 
+// let l = s.split("").sort();
+// let r= t.split
+
+// console.log(l)
+// let s="race a Car"
+// let res=[];
+//     let str;
+//     for(let i=s.length-1;i>=0;i--){
+//         if(s.charCodeAt(i)>=65 && s.charCodeAt(i)<=90 ||s.charCodeAt(i)>=97 && s.charCodeAt(i)<=122 ){
+//            res.push(s[i])
+           
+//         }
+//     }
+// str = res.join("").toLowerCase();
+// res=res.reverse().join("").toLowerCase();
+
+// // res = res.join("").toLowerCase()
+// console.log(str);
+// console.log(res)
