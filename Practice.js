@@ -841,3 +841,34 @@
 // // res = res.join("").toLowerCase()
 // console.log(str);
 // console.log(res)
+// let s="the sky is blue"
+// let stack=[];
+//     for(let i=0;i<s.length;){
+//         if(/[a-z]/.test(s[i])){
+//             let j=i;
+//             let str="";
+//             while(/[a-z]/.test(s[j]) && j<s.length){
+//               str+=s[j]
+//               j++;
+//             }
+//             stack.push(str);
+//             i=j;
+//         }
+//         else{
+//             i++;
+//         }
+// }
+// let ans=""
+// for(let i=stack.length-1;i>=0;i--){
+//     if(i>0){
+//       ans=ans+stack[i]+" "
+//     }else{
+//         ans=ans+stack[i]
+//     }
+    
+// }
+    
+// console.log(ans)
+//     console.log(stack)
+let s=[1,2]
+console.log(s.join(" "));
