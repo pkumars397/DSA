@@ -12,20 +12,27 @@
 // }
 // console.log(set)
 
-//3. SHORTCUT TO CHECK CHAR IS NUMBER OR NO
+//3. SHORTCUT TO CHECK CHAR IS NUMBER ,a to z Or A to Z
 
-// let res=""
+// let res = "";
 // let s = "134sh";
-// for (let i = 0; i < s.length; i++){
-//     if (/[0-9]/.test(s[i])) {
-//         res += s[i];
-//     }
+// for (let i = 0; i < s.length; i++) {
+//   if (/[a-z]/.test(s[i])) {
+//     res += s[i];
+//   }
 // }
-// console.log(res)
+// console.log(res);
 
 // 4. REVERSE() METHOD AUTOMATICALLY REVERSE PARENT ARRAY TOO.
 
 // let a = [1, 2, 3, 4, 6]
+// let l = a;
 // let r = a.reverse();
+// console.log(l)
 // console.log(a)
 // console.log(r)
+
+// Flat Method For joining the 2d array to 1d
+let a = [[1, 2, 4], [12, 3, 4]]
+
+console.log(a.flat())
