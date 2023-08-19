@@ -33,6 +33,18 @@
 // console.log(r)
 
 // Flat Method For joining the 2d array to 1d
-let a = [[1, 2, 4], [12, 3, 4]]
 
-console.log(a.flat())
+// let a = [[1, 2, 4], [12, 3, 4]]
+
+// console.log(a.flat())
+
+// Split To convert string into Array by giving some conditions
+
+// let s = "  hello world  "
+// console.log(s.split(""))
+// console.log(s.split(" "))
+
+// Repeat certain strings
+
+s = "  hello world  "
+console.log(s.repeat(3))
