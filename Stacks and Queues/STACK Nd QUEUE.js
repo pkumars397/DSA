@@ -141,7 +141,7 @@ class Queue{
     this.q = [];
     this.rear = -1;
   }
-
+  // Time complexity o(1)
   enqueue(element) {
     if (this.rear == this.capacity-1) {
       return "full";
@@ -149,7 +149,7 @@ class Queue{
     this.rear++
     this.q[this.rear] = element;
   }
-
+// Time complexicity )(n)
   dequeue() {
     if (this.rear === -1) {
         return "empty";
@@ -191,4 +191,5 @@ q1.dequeue();
 q1.dequeue();
 console.log(q1.isempty())
 console.log(q1.dequeue())
+
 

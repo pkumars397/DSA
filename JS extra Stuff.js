@@ -54,3 +54,13 @@
 // let a = [1, 2, 4];
 // console.log(a.join(" "))
 
+// Shift >> changes the original array;
+// let a = [1, 2, 3]
+
+// console.log(a.shift())
+// console.log(a)
+
+// unshift >> Adds an element in original array
+
+// console.log(a.unshift(4))
+// console.log(a)
