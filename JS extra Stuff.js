@@ -64,3 +64,24 @@
 
 // console.log(a.unshift(4))
 // console.log(a)
+
+// indexOf >> its searches from start to end in String .
+
+// let s = "prashant"
+// console.log(s.indexOf("r"))
+
+// lastIndexOf >> searches from end to start and return first match ,but returns index based on starting.
+
+// console.log(s.lastIndexOf("r"))
+
+// slice ,from LtoR ,indexing from 0..n-1; and from left to right -1,-2,-3 like that. Always prints from LtoR
+
+
+// let a = "prashant"
+// console.log(a.slice(-5,-1))
+
+// Method of sorting using Spread Operator && Doesn't changes the original Array.
+
+let a = [1, 2, 3, -1, 7];
+console.log([...a].sort((a, b) => (b - a)))
+console.log(a)
