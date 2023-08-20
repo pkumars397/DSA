@@ -13,6 +13,7 @@ function selectionSort(arr) {
     }
   }
   return arr;
+
 }
 
 var arr = [5, 1, 2, 4, 3];

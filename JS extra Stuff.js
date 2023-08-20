@@ -51,5 +51,6 @@
 
 // Join >> used to join the elements of array by some seperator
 
-let a = [1, 2, 4];
-console.log(a.join(" "))
+// let a = [1, 2, 4];
+// console.log(a.join(" "))
+

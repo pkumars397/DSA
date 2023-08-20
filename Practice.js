@@ -870,5 +870,6 @@
     
 // console.log(ans)
 //     console.log(stack)
-let s=[1,2]
-console.log(s.join(" "));
+// let s=[1,2]
+// console.log(s.join(" "));
+
