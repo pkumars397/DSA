@@ -70,65 +70,125 @@
 
 //  Queue
 
+// class Queue{
+//   constructor() {
+//     this.array = [];
+//     this.front = -1;
+//     this.rear = -1;
+//   }
+//   enqueue(element) {
+//     if (this.front == -1) {
+//       this.front++;
+//       this.rear++
+//     } else {
+//       this.rear++;
+//     }
+//     this.array[this.rear] = element;
+//   }
+//   display() {
+//     console.log(this.array)
+//   }
+//   dequeue() {
+//     if (this.rear == -1 || this.front==-1) {
+//       console.log("Dum dum Queue Empty")
+//     } else if (this.front == this.rear) {
+//       this.front--;
+//       this.rear--;
+//     } else {
+//       this.front = this.front + 1;
+//     }
+//   }
+
+//   front() {
+//     console.log(this.front);
+//   }
+//   rear() {
+//     console.log(this.rear);
+//   }
+//   isEmpty() {
+//     if (this.front == -1 && this.rear == -1) {
+//       return true;
+//     }
+//     else {
+//       return false;
+//     }
+//   }
+//   get_first_element() {
+//     return this.array[this.front];
+//   }
+// }
+
+// let x = new Queue();
+// x.enqueue(12);
+// x.display();
+// console.log(x.array)
+// x.enqueue(9)
+// x.enqueue(10)
+// console.log(x.array)
+// x.display();
+// console.log(x.front,x.rear)
+// x.dequeue(10);
+// console.log(x.front,x.rear)
+// x.display()
+// console.log(x.isEmpty())
+// console.log(x.get_first_element())
+
+// Queue with capacity >> Anoj Bhaiya
+
 class Queue{
-  constructor() {
-    this.array = [];
-    this.front = -1;
+  constructor(n) {
+    this.capacity=n
+    this.q = [];
     this.rear = -1;
   }
+
   enqueue(element) {
-    if (this.front == -1) {
-      this.front++;
-      this.rear++
-    } else {
-      this.rear++;
+    if (this.rear == this.capacity-1) {
+      return "full";
     }
-    this.array[this.rear] = element;
-  }
-  display() {
-    console.log(this.array)
-  }
-  dequeue() {
-    if (this.rear == -1 || this.front==-1) {
-      console.log("Dum dum Queue Empty")
-    } else if (this.front == this.rear) {
-      this.front--;
-      this.rear--;
-    } else {
-      this.front = this.front + 1;
-    }
+    this.rear++
+    this.q[this.rear] = element;
   }
 
-  front() {
-    console.log(this.front);
-  }
-  rear() {
-    console.log(this.rear);
-  }
-  isEmpty() {
-    if (this.front == -1 && this.rear == -1) {
-      return true;
+  dequeue() {
+    if (this.rear === -1) {
+        return "empty";
     }
-    else {
-      return false;
+    const result = this.q[0];
+    for (let i = 0; i <=this.rear; i++) {
+        this.q[i] = this.q[i + 1];
     }
-  }
-  get_first_element() {
-    return this.array[this.front];
-  }
+    
+    this.rear--;
+    return result;
+}
+  isempty() {
+    if (this.rear == -1) {
+      return true;;
+    }
+    return false;
+ }
+
 }
 
-let x = new Queue();
-x.enqueue(12);
-x.display();
-console.log(x.array)
-x.enqueue(9)
-x.enqueue(10)
-console.log(x.array)
-x.display();
-console.log(x.front,x.rear)
-x.dequeue(10);
-console.log(x.front,x.rear)
-x.display()
-console.log(x.isEmpty())
-console.log(x.get_first_element())
+let q1 = new Queue(5);
+q1.enqueue(10)
+q1.enqueue(10)
+q1.enqueue(10)
+q1.enqueue(10)
+q1.enqueue(10)
+console.log(q1.enqueue(10))
+console.log(q1.q)
+q1.dequeue();
+console.log(q1.q)
+q1.enqueue(1)
+console.log(q1.q)
+console.log(q1.isempty())
+q1.dequeue();
+q1.dequeue();
+q1.dequeue();
+q1.dequeue();
+q1.dequeue();
+console.log(q1.isempty())
+console.log(q1.dequeue())
+
