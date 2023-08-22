@@ -76,12 +76,18 @@
 
 // slice ,from LtoR ,indexing from 0..n-1; and from left to right -1,-2,-3 like that. Always prints from LtoR
 
-
 // let a = "prashant"
 // console.log(a.slice(-5,-1))
 
-// Method of sorting using Spread Operator && Doesn't changes the original Array.
+// Method of sorting using Spread Operator && Doesn't changes the original Array.Does not change original Array.
 
-let a = [1, 2, 3, -1, 7];
-console.log([...a].sort((a, b) => (b - a)))
-console.log(a)
+// let a = [1, 2, 3, -1, 7];
+// console.log([...a].sort((a, b) => b - a));
+// console.log(a);
+
+// Iterator in set>> get the values of set
+
+let set = new Set([1, 2, 2, 3])
+let iterator = set.values();
+console.log(iterator.next().value)
+console.log(iterator.next().value)
