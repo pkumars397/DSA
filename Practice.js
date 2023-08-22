@@ -873,7 +873,34 @@
 // let s=[1,2]
 // console.log(s.join(" "));
 
-let a = [1, 2, 3]
+// let a = [1, 2, 3]
 
-console.log(a.shift())
-console.log(a)
+// console.log(a.shift())
+// console.log(a)
+
+
+// console.log(parseInt(a.join(""))
+// let num = [2, 7, 4], k = 181
+// let ans = [];
+// let sum = parseInt(num.join('')) + k;
+// while(sum>0){
+//     ans.push(sum%10)
+//     sum=Math.floor(sum/10)
+// }
+// console.log(ans.reverse())
+
+
+// let a = "BruceWayn"
+// let str=""
+// for (let i =1 ; i <= a.length; i++){
+   
+//     str = str + a[i - 1];
+//     if (/[A-Z]/.test(a[i])) {
+//         str=str+" "
+//     }
+// }
+
+// console.log(str.toLocaleLowerCase());
+
+let a = [1, 2], b = [12, 3]
+console.log(a.concat(b))
