@@ -135,61 +135,61 @@
 
 // Queue with capacity >> Anoj Bhaiya
 
-class Queue{
-  constructor(n) {
-    this.capacity=n
-    this.q = [];
-    this.rear = -1;
-  }
-  // Time complexity o(1)
-  enqueue(element) {
-    if (this.rear == this.capacity-1) {
-      return "full";
-    }
-    this.rear++
-    this.q[this.rear] = element;
-  }
-// Time complexicity )(n)
-  dequeue() {
-    if (this.rear === -1) {
-        return "empty";
-    }
-    const result = this.q[0];
-    for (let i = 0; i <=this.rear; i++) {
-        this.q[i] = this.q[i + 1];
-    }
+// class Queue{
+//   constructor(n) {
+//     this.capacity=n
+//     this.q = [];
+//     this.rear = -1;
+//   }
+//   // Time complexity o(1)
+//   enqueue(element) {
+//     if (this.rear == this.capacity-1) {
+//       return "full";
+//     }
+//     this.rear++
+//     this.q[this.rear] = element;
+//   }
+// // Time complexicity o(n)
+//   dequeue() {
+//     if (this.rear === -1) {
+//         return "empty";
+//     }
+//     const result = this.q[0];
+//     for (let i = 0; i <=this.rear; i++) {
+//         this.q[i] = this.q[i + 1];
+//     }
     
-    this.rear--;
-    return result;
-}
-  isempty() {
-    if (this.rear == -1) {
-      return true;;
-    }
-    return false;
- }
+//     this.rear--;
+//     return result;
+// }
+//   isempty() {
+//     if (this.rear == -1) {
+//       return true;;
+//     }
+//     return false;
+//  }
 
-}
+// }
 
-let q1 = new Queue(5);
-q1.enqueue(10)
-q1.enqueue(10)
-q1.enqueue(10)
-q1.enqueue(10)
-q1.enqueue(10)
-console.log(q1.enqueue(10))
-console.log(q1.q)
-q1.dequeue();
-console.log(q1.q)
-q1.enqueue(1)
-console.log(q1.q)
-console.log(q1.isempty())
-q1.dequeue();
-q1.dequeue();
-q1.dequeue();
-q1.dequeue();
-q1.dequeue();
-console.log(q1.isempty())
-console.log(q1.dequeue())
+// let q1 = new Queue(5);
+// q1.enqueue(10)
+// q1.enqueue(10)
+// q1.enqueue(10)
+// q1.enqueue(10)
+// q1.enqueue(10)
+// console.log(q1.enqueue(10))
+// console.log(q1.q)
+// q1.dequeue();
+// console.log(q1.q)
+// q1.enqueue(1)
+// console.log(q1.q)
+// console.log(q1.isempty())
+// q1.dequeue();
+// q1.dequeue();
+// q1.dequeue();
+// q1.dequeue();
+// q1.dequeue();
+// console.log(q1.isempty())
+// console.log(q1.dequeue())
 
 

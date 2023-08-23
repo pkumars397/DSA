@@ -902,5 +902,99 @@
 
 // console.log(str.toLocaleLowerCase());
 
-let a = [1, 2], b = [12, 3]
-console.log(a.concat(b))
+// // let a = [1, 2], b = [12, 3]
+// // console.log(a.concat(b))
+
+// STACK Full Pledge
+// class Stack{
+//     constructor(size) {
+//         this.array = [];
+//         this.top = -1
+//         this.capacity = size;
+//     }
+//     push(e) {
+//         if (this.array.length == this.capacity) {
+//             return "array full"
+//         } else {
+//         this.top++;
+//         this.array[this.top]=e
+//         }
+//     }
+//     pop() {
+//         if (this.top==-1) {
+//             return "empty"
+//         } else {
+//             this.top--;
+//             return this.array.pop()
+            
+//         }
+//     }
+//     isEmpty() {
+//         if (this.top == -1) {
+//             return true;
+//         }
+//         return false
+//     }
+//     peek() {
+//         if (this.top == -1) {
+//             return "empty"
+//         }
+//         return this.array[this.top]
+//     }
+// }
+
+// const stack1 = new Stack(1)
+// stack1.push(3)
+// console.log(stack1.push(4))
+// // console.log(stack1.pop(),stack1.top)
+// console.log(stack1.array)
+// console.log(stack1.isEmpty())
+// stack1.pop();
+
+// console.log(stack1.isEmpty(), stack1.top)
+// console.log(stack1.peek())
+
+// QUEUE FULL Pledge
+class Queue{
+    constructor(size) {
+        this.q = [];
+        this.front = -1;
+        this.rear = -1;
+        this.capacity = size;
+    }
+    enqueue(e) {
+        if (this.capacity == this.q.length) {
+            return "Queue is full"
+        }
+        else if(this.front==-1){
+            this.front++;
+            this.rear++;
+        } else {
+            this.rear++;
+        }
+        this.q[this.rear]=e
+    }
+    dequeue() {
+        if (this.rear == -1 || this.front==-1) {
+            return "empty queue"
+        } else if (this.front == 0 && this.rear == 0) {
+            this.front--
+            this.rear--
+        }
+        else {
+            this.front++;
+            return this.q.shift()
+        }
+    }
+
+}
+const q1 = new Queue(5);
+q1.enqueue(2)
+q1.enqueue(2)
+q1.enqueue(2)
+q1.enqueue(2)
+q1.enqueue(2)
+console.log(q1.enqueue(2))
+console.log(q1.q)
+console.log(q1.dequeue())
+console.log(q1.q)
