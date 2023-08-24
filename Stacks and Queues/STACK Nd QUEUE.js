@@ -158,7 +158,7 @@
 //     for (let i = 0; i <=this.rear; i++) {
 //         this.q[i] = this.q[i + 1];
 //     }
-    
+       
 //     this.rear--;
 //     return result;
 // }

@@ -955,46 +955,63 @@
 // console.log(stack1.peek())
 
 // QUEUE FULL Pledge
-class Queue{
-    constructor(size) {
-        this.q = [];
-        this.front = -1;
-        this.rear = -1;
-        this.capacity = size;
-    }
-    enqueue(e) {
-        if (this.capacity == this.q.length) {
-            return "Queue is full"
-        }
-        else if(this.front==-1){
-            this.front++;
-            this.rear++;
-        } else {
-            this.rear++;
-        }
-        this.q[this.rear]=e
-    }
-    dequeue() {
-        if (this.rear == -1 || this.front==-1) {
-            return "empty queue"
-        } else if (this.front == 0 && this.rear == 0) {
-            this.front--
-            this.rear--
-        }
-        else {
-            this.front++;
-            return this.q.shift()
-        }
-    }
+// class Queue{
+//     constructor(size) {
+//         this.q = [];
+//         this.front = -1;
+//         this.rear = -1;
+//         this.capacity = size;
+//     }
+//     enqueue(e) {
+//         if (this.capacity == this.q.length) {
+//             return "Queue is full"
+//         }
+//         else if(this.front==-1){
+//             this.front++;
+//             this.rear++;
+//         } else {
+//             this.rear++;
+//         }
+//         this.q[this.rear]=e
+//     }
+//     dequeue() {
+//         if (this.rear == -1 || this.front==-1) {
+//             return "empty queue"
+//         } else if (this.front == 0 && this.rear == 0) {
+//             this.front--
+//             this.rear--
+//         }
+//         else {
+//             this.front++;
+//             return this.q.shift()
+//         }
+//     }
 
-}
-const q1 = new Queue(5);
-q1.enqueue(2)
-q1.enqueue(2)
-q1.enqueue(2)
-q1.enqueue(2)
-q1.enqueue(2)
-console.log(q1.enqueue(2))
-console.log(q1.q)
-console.log(q1.dequeue())
-console.log(q1.q)
+// }
+// const q1 = new Queue(5);
+// q1.enqueue(2)
+// q1.enqueue(2)
+// q1.enqueue(2)
+// q1.enqueue(2)
+// q1.enqueue(2)
+// console.log(q1.enqueue(2))
+// console.log(q1.q)
+// console.log(q1.dequeue())
+// console.log(q1.q)
+// let arr=[3, 2, 1]
+// let count = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++){
+//             if (arr[i] > arr[j]) {
+//                 count++
+//             }
+//         }
+//     }
+// console.log(count);
+// let currentsum = 3;
+// ans = 2;
+// ans = (currentsum > ans) ? currentsum : ans;
+
+// console.log(ans);
+let a = ["flower","flow","flight"]
+console.log(a.sort())
