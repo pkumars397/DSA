@@ -87,7 +87,21 @@
 
 // Iterator in set>> get the values of set
 
-let set = new Set([1, 2, 2, 3])
-let iterator = set.values();
-console.log(iterator.next().value)
-console.log(iterator.next().value)
+// let set = new Set([1, 2, 2, 3])
+// let iterator = set.values();
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+
+// Array.from(set)..will create an array from set values.
+// const arr = Array.from(set)
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i])
+// }
+
+// set and map both iterable,object is not iterable.
+// we can spread the array and push into some other array
+// let a = [1, 2, 3]
+// let res = [2,3];
+// res.push(...a);
+// console.log(res);
+

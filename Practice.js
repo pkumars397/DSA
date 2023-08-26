@@ -1013,5 +1013,26 @@
 // ans = (currentsum > ans) ? currentsum : ans;
 
 // console.log(ans);
-let a = ["flower","flow","flight"]
-console.log(a.sort())
+// let a = ["flower","flow","flight"]
+// console.log(a.sort())
+// let set = new Set([1, 2, 3, 4, 4])
+// for (let val of set) {
+//     console.log(val)
+// }
+
+// let arr = Array.from(set)
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i])
+// }
+
+let a = [3, 1, 5, 2, 4]
+//[3,-1,4,-1,-1]
+function farthestLowertoR(a) {
+    let stack = [];
+    let ans = []
+    for (let i = 0; i < a.length; i++){
+       
+    }
+}
+console.log(farthestLowertoR(a));  
+
