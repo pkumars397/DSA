@@ -28,6 +28,14 @@
 //     return b;
 // };
 
+// var rotate = function(nums, k) {
+//   let b=[...nums];//cloning
+//   for(let i=0;i<b.length;i++){
+//       let pos=(i+k)%b.length;
+//       nums[pos]=b[i]
+//   }
+//   return nums;
+// };
 // Approach 3 O(n) and Space(0)
 // function reverse(array, s, e) {
 //   while (s < e) {
@@ -65,9 +73,9 @@
 // }
 function rotate(arr, k) {
   k = k % arr.length;
-  let extracted = arr.splice(arr.length - k, k)
-  extracted.push(...arr);
-  return extracted;
+  let extracted = arr.splice(0,arr.length - k);
+  arr.push(...extracted)
+  return arr;
 }
 var arr = [1, 2, 3, 4, 5, 6];
 var k = 4;
