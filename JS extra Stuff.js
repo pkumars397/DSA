@@ -105,3 +105,12 @@
 // res.push(...a);
 // console.log(res);
 
+// Splice Method
+// let arr = [1,2,3];
+// arr.splice(0, 1, "d")//first ..starting ,how many delete,to insert
+// console.log(arr)
+
+// let a = undefined;
+// console.log(!a);//true;
+// let temp = undefined;
+// console.log(temp!=2);//true;

@@ -1,7 +1,3 @@
-function rotate(arr, k) {
-  k = k % arr.length;
-  for (var j = 0; j < k; j++) {
-    arr.unshift(arr.pop());
-  }
-  return arr;
-}
+var arr = [1, 2, 3, 4, 5, 6];
+var k = 4;
+console.log(rotate(arr, k));

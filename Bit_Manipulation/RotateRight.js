@@ -36,6 +36,7 @@
 //   }
 //   return nums;
 // };
+
 // Approach 3 O(n) and Space(0)
 // function reverse(array, s, e) {
 //   while (s < e) {
@@ -64,19 +65,46 @@
 // }
 
 // Approach 5th
-// Left Rotated
+// function rotate(arr, k) {
+//   k = k % arr.length;
+//   let extracted = arr.splice(0,arr.length - k);
+//   arr.push(...extracted)
+//   return arr;
+// }
+
+
+// left Rotate Approach
+// 1st
 // function rotate(arr, k) {
 //   k = k % arr.length;
 //   let cutted = arr.splice(0, k);
 //   arr.push(...cutted);
 //   return arr;
 // }
+
+// 2nd Approach
+// function rotate(arr, k) {
+//   k = k % arr.length;
+//   for (let i = 0; i < k; i++){
+//     arr.push(arr.shift())
+//   }
+//   return arr;
+// }
+
+// 3rd 
 function rotate(arr, k) {
-  k = k % arr.length;
-  let extracted = arr.splice(0,arr.length - k);
-  arr.push(...extracted)
+  reverse(arr, 0, arr.length - 1)
+  reverse(arr, 0, arr.length - k - 1)
+  reverse(arr, arr.length - k, arr.length - 1)
   return arr;
 }
-var arr = [1, 2, 3, 4, 5, 6];
-var k = 4;
+function reverse(arr, start, end) {
+  while (start < end) {
+    [arr[start], arr[end]] = [arr[end], arr[start]]
+    start++;
+    end--;
+  }
+}
+var arr = [1, 2, 3, 4, 5, 6]; //6 5 4 3 2 1  >>3 4 5 6 2 1 >> 3 4 5 6 1 2
+var k = 2;
 console.log(rotate(arr, k));
