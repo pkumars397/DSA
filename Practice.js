@@ -1025,14 +1025,3 @@
 //     console.log(arr[i])
 // }
 
-let a = [3, 1, 5, 2, 4]
-//[3,-1,4,-1,-1]
-function farthestLowertoR(a) {
-    let stack = [];
-    let ans = []
-    for (let i = 0; i < a.length; i++){
-       
-    }
-}
-console.log(farthestLowertoR(a));  
-

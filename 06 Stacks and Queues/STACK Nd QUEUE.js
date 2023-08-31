@@ -68,7 +68,7 @@
 // console.log(x.peek());
 
 
-//  Queue
+// ! Queue
 
 // class Queue{
 //   constructor() {
@@ -133,7 +133,7 @@
 // console.log(x.isEmpty())
 // console.log(x.get_first_element())
 
-// Queue with capacity >> Anoj Bhaiya
+// *Queue with capacity >> Anoj Bhaiya
 
 // class Queue{
 //   constructor(n) {
@@ -141,7 +141,7 @@
 //     this.q = [];
 //     this.rear = -1;
 //   }
-//   // Time complexity o(1)
+// ? Time complexity o(1)
 //   enqueue(element) {
 //     if (this.rear == this.capacity-1) {
 //       return "full";
@@ -149,7 +149,7 @@
 //     this.rear++
 //     this.q[this.rear] = element;
 //   }
-// // Time complexicity o(n)
+// ? Time complexicity o(n)
 //   dequeue() {
 //     if (this.rear === -1) {
 //         return "empty";
@@ -193,3 +193,50 @@
 // console.log(q1.dequeue())
 
 
+// ! Queue Implementation
+class Queue{
+    constructor() {
+        this.q = [];
+        this.front = -1;
+        this.back = -1;
+    }
+    enqueue(val) {
+        if (this.front == -1) {
+            this.front = 0;
+            this.back++
+            this.q[this.back]=val
+        } else {
+            this.back++;
+            this.q[this.back] = val;
+        }
+    }
+    dequeue() {
+        if (this.isEmpty) {
+            return "queue is empty";
+        } else if(this.front!=this.back){
+            this.back--;
+            this.q.shift()
+        } else {
+            this.front--;
+            this.back--;
+            this.q.shift();
+        }
+    }
+    isEmpty() {
+        if (this.front == -1 || this.back == -1) {
+            return true;
+        }
+        return false;
+    }
+    
+}
+
+const q1 = new Queue();
+q1.enqueue(2);
+q1.enqueue(3);
+q1.dequeue();
+console.log(q1.q)
+q1.enqueue(4);
+console.log(q1.q)
+console.log(q1.isEmpty())
+console.log(q1)
