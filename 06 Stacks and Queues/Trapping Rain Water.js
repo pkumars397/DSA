@@ -1,6 +1,22 @@
 // Approach >> Aditya Bhaiya Video se Aya. min(MxR & MxL)-arr[i] ,store it in sum and find total sum then
 // that will be our answer
 
+//* O(n2)
+    // let res=0;
+    // for(let i=1;i<=height.length-2;i++){
+    //   let lb=height[i]
+    //   for(let j=0;j<i;j++){
+    //     lb=Math.max(lb,height[j])
+    //   }
+    //   let rb=height[i];
+    //   for( j=i+1;j<height.length;j++){
+    //     rb=Math.max(rb,height[j])
+    //   }
+    //   let wt=Math.min(lb,rb);
+    //   res=res+wt-height[i]
+    // }
+    // return res;
+
 // Step1 Maximum Elment in array on left;
 let height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
 let mxl = [];
