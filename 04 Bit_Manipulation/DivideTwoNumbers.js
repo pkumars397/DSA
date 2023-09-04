@@ -31,5 +31,5 @@ var divide = function (dividend, divisor) {
 };
 
 var a = 13,
-  b = -2;
+  b = 1;
 console.log(divide(a, b));

@@ -64,5 +64,5 @@ var toHex = function (num) {
 
 
 var num;
-num = 10;
+num = -10;
 console.log(toHex(num))
