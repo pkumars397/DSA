@@ -21,19 +21,28 @@
 
 // };
 
+// var extract_number = function (s) {
+//   let map = new Map();
+//   for (let i = 0; i < s.length; i++) {
+//     if (s.charCodeAt(i) >= 48 && s.charCodeAt(i) <= 57) {
+//       map.set(i, s[i]);
+//     }
+//   }
+//   var s = "";
+//   for (val of map.values()) {
+//     s += val;
+//   }
+//   return s;
+// };
+// Method 3
 var extract_number = function (s) {
-  let map = new Map();
-  for (let i = 0; i < s.length; i++) {
-    if (s.charCodeAt(i) >= 48 && s.charCodeAt(i) <= 57) {
-      map.set(i, s[i]);
+  let ans=''
+  for (let i = 0; i < s.length; i++){
+    if (/[0-9]/.test(s[i])) {
+      ans+=s[i]
     }
   }
-  var s = "";
-  for (val of map.values()) {
-    s += val;
-  }
-  return s;
-};
-
+  return ans
+}
 let s = "hsleo469dj4e";
 console.log(extract_number(s));
