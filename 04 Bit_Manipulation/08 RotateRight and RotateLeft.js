@@ -91,7 +91,7 @@
 //   return arr;
 // }
 
-// 3rd 
+// 3rd Approach
 function rotate(arr, k) {
   reverse(arr, 0, arr.length - 1)
   reverse(arr, 0, arr.length - k - 1)
