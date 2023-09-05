@@ -1,4 +1,4 @@
-var arrange = function (nums) {
+function arrange(nums) {
   let left = 0;
   let right = nums.length - 1;
 
@@ -22,7 +22,7 @@ var arrange = function (nums) {
   }
 
   return nums;
-};
+}
 
-var nums = [1, 2 - 23, 4, -2];
+var nums = [1, 2, - 23, 4, -2,0];
 console.log(arrange(nums));

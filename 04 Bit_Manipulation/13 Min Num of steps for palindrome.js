@@ -37,7 +37,4 @@ var minimum_count = function(s) {
     
     }
     return j;
-    
-    
-    
 };

@@ -26,9 +26,9 @@ function leftSearch(nums, target) {
 }
 
 function rightSearch(nums, target) {
-  var s = 0;
-  var e = nums.length - 1;
-  var index = -1;
+var s = 0;
+var e = nums.length - 1;
+var index = -1;
   while (s <= e) {
     var mid = Math.floor((s + e) / 2);
     if (nums[mid] === target) {

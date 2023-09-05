@@ -1,3 +1,4 @@
+"use strict";
 var jewels = "aA",
   stones = "aAAbbbbab";
 
