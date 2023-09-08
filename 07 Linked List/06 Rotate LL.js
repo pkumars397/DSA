@@ -23,18 +23,7 @@ var rotateRight = function(head, k) {
 };
 
 // ? Method 2 Optimized Method
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @param {number} k
- * @return {ListNode}
- */
+
 var rotateRight = function(head, k) {
     if(!head || !head.next){
         return head;
