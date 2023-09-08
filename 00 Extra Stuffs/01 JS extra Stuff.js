@@ -103,7 +103,7 @@
 // res.push(...a);
 // console.log(res);
 
-//? Splice Method
+//? Splice Method(its also changes the array in place)
 // let arr = [1,2,3];
 // arr.splice(0, 1, "d")//first ..starting ,how many delete,to insert
 // console.log(arr)
@@ -116,3 +116,9 @@
 //? num to hex directly
 // let n = 20;
 // console.log(n.toString(16))
+
+// ! Replace Method in the String ;
+// let str = "Hello , World";
+// let newStr = str.replace(/ /g, "");
+// let newStr2=str.replace(/,/g, "");
+// console.log(newStr,newStr2);
