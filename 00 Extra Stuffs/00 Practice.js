@@ -705,7 +705,7 @@
 // let ans = [];
 // let pseudoelement=-1
 // for (let i = 0; i < heights.length; i++){
-        
+
 //         if(nslStack.length==0){
 //             ans.push(pseudoelement)
 //         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] < heights[i]) {
@@ -720,7 +720,7 @@
 //                 ans.push(nslStack[nslStack.length-1][1])
 //             }
 //         }
-       
+
 //         nslStack.push([heights[i],i])
 // }
 
@@ -729,7 +729,7 @@
 
 // pseudoelement = heights.length
 // for (let i = heights.length-1; i >=0; i--){
-        
+
 //         if(nsrStack.length==0){
 //             ansr.push(pseudoelement)
 //         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] <heights[i]) {
@@ -744,7 +744,7 @@
 //                 ansr.push(nsrStack[nsrStack.length-1][1])
 //             }
 //         }
-       
+
 //         nsrStack.push([heights[i],i])
 // }
 // ansr.reverse();
@@ -766,7 +766,7 @@
 // let ans = [];
 // let pseudoelement=-1
 // for (let i = 0; i < heights.length; i++){
-        
+
 //         if(nslStack.length==0){
 //             ans.push(pseudoelement)
 //         } else if (nslStack.length > 0 && nslStack[nslStack.length - 1][0] < heights[i]) {
@@ -781,7 +781,7 @@
 //                 ans.push(nslStack[nslStack.length-1][1])
 //             }
 //         }
-       
+
 //         nslStack.push([heights[i],i])
 // }
 
@@ -790,7 +790,7 @@
 
 // pseudoelement = heights.length-1
 // for (let i = heights.length-1; i >=0; i--){
-        
+
 //         if(nsrStack.length==0){
 //             ansr.push(pseudoelement)
 //         } else if (nsrStack.length > 0 && nsrStack[nsrStack.length - 1][0] <heights[i]) {
@@ -805,7 +805,7 @@
 //                 ansr.push(nsrStack[nsrStack.length-1][1])
 //             }
 //         }
-       
+
 //         nsrStack.push([heights[i],i])
 // }
 // ansr.reverse();
@@ -818,7 +818,7 @@
 // for (i = 0; i < heights.length; i++){
 //     area[i] = width[i] * heights[i];
 // }
- 
+
 // console.log(Math.max(...area))
 // let s = "anagram"
 
@@ -832,7 +832,7 @@
 //     for(let i=s.length-1;i>=0;i--){
 //         if(s.charCodeAt(i)>=65 && s.charCodeAt(i)<=90 ||s.charCodeAt(i)>=97 && s.charCodeAt(i)<=122 ){
 //            res.push(s[i])
-           
+
 //         }
 //     }
 // str = res.join("").toLowerCase();
@@ -865,9 +865,9 @@
 //     }else{
 //         ans=ans+stack[i]
 //     }
-    
+
 // }
-    
+
 // console.log(ans)
 //     console.log(stack)
 // let s=[1,2]
@@ -877,7 +877,6 @@
 
 // console.log(a.shift())
 // console.log(a)
-
 
 // console.log(parseInt(a.join(""))
 // let num = [2, 7, 4], k = 181
@@ -889,11 +888,10 @@
 // }
 // console.log(ans.reverse())
 
-
 // let a = "BruceWayn"
 // let str=""
 // for (let i =1 ; i <= a.length; i++){
-   
+
 //     str = str + a[i - 1];
 //     if (/[A-Z]/.test(a[i])) {
 //         str=str+" "
@@ -926,7 +924,7 @@
 //         } else {
 //             this.top--;
 //             return this.array.pop()
-            
+
 //         }
 //     }
 //     isEmpty() {
@@ -1025,6 +1023,70 @@
 //     console.log(arr[i])
 // }
 
-let a = [2, 3, 4]
-a.unshift(5);
-console.log(a)
+// let a = [2, 3, 4]
+// a.unshift(5);
+// console.log(a)
+
+const posts = [{ title: "POST1" }];
+
+function create2ndPost() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      posts.push({ title: "POST2" });
+      resolve();
+    }, 3000);
+  });
+}
+//Do not touch this function
+function create3rPost() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      posts.push({ title: "POST3" });
+      resolve();
+    }, 2000);
+  });
+}
+
+//Do not touch this function
+function deletePost() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (posts.length > 0) {
+        const poppedElement = posts.pop();
+        resolve(poppedElement);
+      } else {
+        reject("ERROR: ARRAY IS EMPTY");
+      }
+    }, 1000);
+  });
+}
+
+// create2ndPost().
+// then(()=>deletePost()
+// .then((element)=>console.log(element.title))
+// .then(()=>create3rPost()
+// .then(()=>deletePost()
+// .then((element)=>{console.log(element.title)}))
+// .then(()=>deletePost()
+// .then((element)=>{console.log(element.title)}))
+// .then(()=>deletePost().catch((error)=>{console.log(error)})))
+// )
+create2ndPost()
+  .then(() => deletePost())
+  .then((element) => {
+    console.log(element.title);
+    return create3rPost()
+  })
+  .then(() => deletePost())
+  .then((element) => {
+    console.log(element.title);
+    return deletePost();
+  })
+  // .then(() => deletePost())
+  .then((element) => {
+    console.log(element.title);
+  })
+  .then((element) => deletePost())
+  .catch((error) => {
+    console.log(error);
+  });
